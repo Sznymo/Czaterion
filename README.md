@@ -19,15 +19,6 @@ Całość zaprojektowana została z myślą o wygodzie i estetyce użytkownika.
 
 ---
 
-## 🆕 Co nowego
-
-### [1.0.0] – 2025-07-11
-- Wszystkie podstawowe funkcje
-
-Pełny changelog znajduje się w pliku [`CHANGELOG.md`](CHANGELOG.md)
-
----
-
 ## 📜 Licencja
 
 Projekt udostępniony jest na licencji [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).  
