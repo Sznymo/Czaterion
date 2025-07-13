@@ -1,0 +1,312 @@
+<!--
+  Czateria Extension
+  Copyright 2025 Sznymo
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Czaterion - Ustawienia</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="icons/icon48.png" alt="Czaterion logo" class="header-icon" />
+      <h1>Czaterion</h1>
+      <span class="version" id="version"></span>
+    </header>
+    <nav>
+      <button class="tab-button active" data-tab="updates">
+        ✨<span>Aktualizacje</span>
+      </button>
+      <button class="tab-button" data-tab="theme">
+        🎨<span>Motyw</span>
+      </button>
+      <button class="tab-button" data-tab="avatars">
+        👤<span>Awatary</span>
+      </button>
+      <button class="tab-button" data-tab="cleanup">
+        🗑️<span>Czyszczenie</span>
+      </button>
+      <button class="tab-button" data-tab="other">⚙️<span>Inne</span></button>
+      <button class="tab-button" data-tab="notifications">
+        🔔<span>Powiadomienia</span>
+      </button>
+      <button class="tab-button" data-tab="history">
+        📜<span>Historia</span>
+      </button>
+    </nav>
+
+    <main>
+      <section class="tab-content active" id="theme-content">
+        <h2>Motyw</h2>
+        <div class="preview-grid">
+          <label class="preview-item">
+            <input type="radio" name="theme" id="origin" value="origin" />
+            <div class="preview-thumb">
+              <img src="themes/orgin/image.webp" alt="Orgin theme preview" />
+            </div>
+            <span class="preview-label">Orgin</span>
+          </label>
+          <label class="preview-item">
+            <input type="radio" name="theme" id="dracula" value="dracula" />
+            <div class="preview-thumb">
+              <img
+                src="themes/dracula/image.webp"
+                alt="Dracula theme preview"
+              />
+            </div>
+            <span class="preview-label">Dracula</span>
+          </label>
+          <label class="preview-item">
+            <input type="radio" name="theme" id="nord" value="nord" />
+            <div class="preview-thumb">
+              <img src="themes/nord/image.webp" alt="Nord theme preview" />
+            </div>
+            <span class="preview-label">Nord</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="tab-content" id="avatars-content">
+        <h2>Zestaw awatarów</h2>
+        <div class="preview-grid">
+          <label class="preview-item">
+            <input type="radio" name="avatars" value="origin" />
+            <div class="preview-thumb">
+              <img
+                src="awatar/orgin/image.webp"
+                alt="Orgin avatar set preview"
+              />
+            </div>
+            <span class="preview-label">Orgin</span>
+          </label>
+          <label class="preview-item">
+            <input type="radio" name="avatars" value="hd" />
+            <div class="preview-thumb">
+              <img src="awatar/hd/image.webp" alt="HD avatar set preview" />
+            </div>
+            <span class="preview-label">HD</span>
+          </label>
+          <label class="preview-item">
+            <input type="radio" name="avatars" value="dracula" />
+            <div class="preview-thumb">
+              <img
+                src="awatar/dracula/image.webp"
+                alt="Dracula avatar set preview"
+              />
+            </div>
+            <span class="preview-label">Dracula</span>
+          </label>
+          <label class="preview-item">
+            <input type="radio" name="avatars" value="emotikon" />
+            <div class="preview-thumb">
+              <img
+                src="awatar/emotikon/image.webp"
+                alt="Emotikon avatar set preview"
+              />
+            </div>
+            <span class="preview-label">Emotikon</span>
+          </label>
+          <label class="preview-item">
+            <input type="radio" name="avatars" value="emotikon-hd" />
+            <div class="preview-thumb">
+              <img
+                src="awatar/emotikon-hd/image.webp"
+                alt="Emotikon HD avatar set preview"
+              />
+            </div>
+            <span class="preview-label">Emotikon HD</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="tab-content" id="cleanup-content">
+        <h2>Czyszczenie interfejsu</h2>
+
+        <div class="cleanup-tips">
+          <h3>Przykładowe selektory do ukrywania elementów:</h3>
+          <ul>
+            <li>
+              📢 Reklamy:
+              <code
+                >.download-app, .czat-adv-box, .autopromo-floatbox,
+                .autopromo-interstitial,
+                .adv-desktop-wrapper__label-container</code
+              >
+            </li>
+            <li>🏷️ Logo: <code>.logo-container</code></li>
+            <li>📰 Aktualności "Co w Czaterii": <code>.simple-news</code></li>
+            <li>✨ Elementy kosmetyczne: <code>#subNavigation</code></li>
+            <li>⚙️ Panel opcji: <code>.panel-wrapper</code></li>
+            <li>
+              🔍 Główna nawigacja: <code>#navigationMain, .help-link</code>
+            </li>
+            <li>
+              ⬆️ Cały górny panel:
+              <code
+                >#mainHeader, #subNavigation, .panel-wrapper, .czat-adv-box,
+                .logo-container, .room-info, .download-app, .help-link</code
+              >
+            </li>
+            <li>🎮 Minigry: <code>.m-game</code></li>
+            <li>🖼️ Tło strony: <code>.floatbox-box-background</code></li>
+          </ul>
+
+          <div>
+            <p><strong>Jak to działa?</strong></p>
+            <p>
+              Po wpisaniu selektorów wybrane elementy natychmiast znikną ze
+              strony. Jeśli usuniesz wpis, elementy ponownie się pojawią.
+            </p>
+            <p>
+              ⚠️ Uwaga: W przypadku wybrania opcji "Usuń na stałe", przywrócenie
+              elementów wymagać będzie odświeżenia strony.
+            </p>
+          </div>
+        </div>
+        <fieldset>
+          <legend>Metoda czyszczenia</legend>
+          <label>
+            <input type="radio" name="cleanupMethod" value="hide" checked />
+            Ukryj elementy
+          </label>
+          <label>
+            <input type="radio" name="cleanupMethod" value="remove" />
+            Usuń na stałe
+          </label>
+        </fieldset>
+
+        <label for="customCleanupSelectors"
+          >Własne selektory (rozdziel przecinkami):</label
+        >
+        <textarea
+          id="customCleanupSelectors"
+          rows="6"
+          placeholder="Przykład: .reklama, #panel-boczny, .niechciany-element"
+        ></textarea>
+      </section>
+
+      <section class="tab-content" id="other-content">
+        <h2>Inne</h2>
+
+        <fieldset>
+          <legend>🧰 Ustawienia interfejsu</legend>
+          <label
+            ><input type="checkbox" id="stretchMsgWindow" /> Rozciągnij okno
+            wiadomości</label
+          >
+        </fieldset>
+
+        <fieldset>
+          <legend>🫂 Społecznościowe</legend>
+          <label
+            ><input type="checkbox" id="enableFriendsEnemiesSystem" /> Włącz
+            system znajomych i wrogów</label
+          >
+        </fieldset>
+
+        <fieldset>
+          <legend>🧑‍💼 Dla zalogowanych</legend>
+          <label
+            ><input type="checkbox" id="showPeopleNearby" /> Pokaż ludzi z
+            okolicy (Nie stabilne)</label
+          >
+        </fieldset>
+      </section>
+
+      <section class="tab-content" id="notifications-content">
+        <h2>Powiadomienia</h2>
+        <label
+          ><input type="checkbox" id="enableNotifications" /> Włącz
+          powiadomienia</label
+        >
+        <fieldset id="notificationTypes" disabled>
+          <label
+            ><input type="checkbox" id="notifyNewMessages" /> Nowe
+            wiadomości</label
+          >
+          <label
+            ><input type="checkbox" id="recordInvitations" /> Rejestruj
+            zaproszenia do rozmowy</label
+          >
+        </fieldset>
+        <label for="notificationSound">Dźwięk powiadomień:</label>
+        <select id="notificationSound">
+          <option value="notification-smooth-modern-stereo-332449">
+            Nowoczesny
+          </option>
+          <option value="notification-1-337826">Klasyczny</option>
+          <option value="bell-notification-337658">Dzwonek</option>
+        </select>
+        <button id="testNotificationSound">🔊 Przetestuj dźwięk</button>
+      </section>
+
+      <section class="tab-content" id="history-content">
+        <h2>Historia zaproszeń</h2>
+        <ul id="invitationHistoryList">
+          <li>Brak danych…</li>
+        </ul>
+      </section>
+
+      <section class="tab-content" id="updates-content">
+  <h2>Ostatnie zmiany</h2>
+  
+  <div class="update-item">
+    <h3>Wersja 1.0.0 <span class="update-date">(2025-07-11)</span></h3>
+    <ul>
+      <li>Wszystkie podstawowe funkcje</li>
+    </ul>
+  </div>
+  
+  
+<h2>Licencja</h2>
+<div class="license-info">
+  <p>
+    Czaterion jest rozpowszechniany na licencji 
+    <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT</a>.
+  </p>
+  <p>
+    Oznacza to, że możesz swobodnie używać, modyfikować i rozpowszechniać
+    to oprogramowanie, pod warunkiem zachowania informacji o licencji i autorze.
+  </p>
+  <p>
+    Pełny tekst licencji dostępny jest w pliku 
+    <a href="LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</a> w głównym katalogu projektu.
+  </p>
+  <p>
+    Uwaga: Dodatki do Czateriona mogą być objęte innymi licencjami niż sam
+    główny projekt. Szczegóły dotyczące licencji dodatków znajdują się w
+    ich odpowiednich katalogach oraz dokumentacji.
+  </p>
+
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+      <a href="https://sznymo.smallhost.pl/" target="_blank" title="Strona autora">
+        <img src="icons/logo.webp" alt="Sznymo – logo" class="logo"
+      /></a>
+      Jeśli podoba Ci się to, co robię, i chcesz mnie wesprzeć – możesz
+      <a href="https://suppi.pl/sznymo" target="_blank">☕ postawić kawę</a> lub
+      <a href="https://paypal.me/sznymo" target="_blank">💜 użyć PayPala</a>.
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

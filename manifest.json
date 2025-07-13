@@ -1,0 +1,67 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "short_name": "Cztrn",
+  "version": "1.0.1",
+  "description": "__MSG_extensionDescription__",
+  "author": "Sznymo",
+  "homepage_url": "https://sznymo.smallhost.pl/pages/czaterion.php",
+  "default_locale": "pl",
+  "permissions": [
+    "storage",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://czateria.interia.pl/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://czateria.interia.pl/*"],
+      "js": [
+        "themeManager.js",
+        "cleanupManager.js",
+        "avatarManager.js",
+        "notificationManager.js",
+        "forLoggedIn.js",
+        "addFriendContext.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "awatar/dracula/*.webp",
+        "awatar/hd/*.webp",
+        "awatar/emotikon/*.webp",
+        "awatar/emotikon-hd/*.webp",
+        "themes/dracula/dracula.css",
+        "themes/nord/nord.css",
+        "themes/dracula/*.webp",
+        "themes/nord/*.webp",
+        "icons/logo.webp",
+        "sounds/*.mp3"
+      ],
+      "matches": ["https://czateria.interia.pl/*"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "czaterion@sznymo.smallhost.pl",
+      "strict_min_version": "109.0"
+    }
+  }
+}

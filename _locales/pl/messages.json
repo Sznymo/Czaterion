@@ -1,0 +1,9 @@
+{
+  "extensionName": {
+    "message": "Czaterion",
+    "description": "Nazwa rozszerzenia (połączenie 'Czateria' i 'Extension')"
+  },
+  "extensionDescription": {
+    "message": "Czaterion — Nieoficjalne rozszerzenie do Czaterii. Motywy, niestandardowe awatary, dźwiękowe powiadomienia oraz narzędzia do sprzątania interfejsu.",
+    "description": "Opis funkcji rozszerzenia"
+  }}

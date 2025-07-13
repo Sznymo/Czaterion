@@ -1,0 +1,202 @@
+:root {
+  --dracula-bg: #282a36;
+  --dracula-fg: #f8f8f2;
+  --dracula-purple: #bd93f9;
+  --dracula-button: #44475a;
+  --dracula-accent: #ff79c6;
+}
+
+
+/* Global body styles */
+body {
+  background: var(--dracula-bg) !important;
+  color: var(--dracula-fg) !important;
+}
+
+.m-messagesTextArea {
+  background-image: url(messagesTextArea.webp);}
+
+/* Button hover states */
+.m-button-option--giflandia input:hover,
+.m-button-option--upload input:hover {
+  background-color: var(--dracula-purple) !important;
+
+}
+
+/* Inverted elements */
+m-invitation-tip-img,
+.adcopy-refresh,
+.box-info-close::after,
+.box-info-content,
+.button-more.visible.with-messages,
+.m-list-user-item-sett,
+.m-popup-user-settings .menu-account-options::before,
+.m-popup-user-settings .priv-max-value-box .input-minus,
+.m-popup-user-settings .priv-max-value-box .input-minus:hover,
+.m-popup-user-settings .priv-max-value-box .input-plus,
+.m-popup-user-settings .priv-max-value-box .input-plus:hover,
+.m-room-list li:hover::before,
+input[type=checkbox]+label::before,
+input[type=checkbox]:checked+label,
+input[type=checkbox]:checked+label::before,
+input[type=radio]+label::before,
+input[type=radio]:checked+label,
+input[type=radio]:checked+label::before,
+ul#m-tab-main-container-1-nav li a input.close-room {
+  filter: invert(1%) sepia(0%) saturate(1%) hue-rotate(1deg);
+  color: var(--dracula-bg);
+}
+
+m-list-user-item-sett:hover{
+  filter: invert(0%) sepia(0%) hue-rotate(244deg);
+}
+ul#m-tab-main-container-1-nav li a input.close-room:active
+ul#m-tab-main-container-1-nav li a:hover input.close-room,
+ul#m-tab-main-container-1-nav li a:active input.close-room{
+  filter: invert(27.5%) hue-rotate(125deg);
+}
+
+/* Text and placeholder colors */
+.content__rules,
+.floatbox-box .label,
+.floatbox-box label,
+.login-info,
+.m-popup-user-settings .menu-account-options {
+  color: var(--dracula-bg) !important;
+}
+
+.simple-news__article .news-item__category,
+.floatbox-box input::placeholder,
+.rules label.login-custom-label a,
+ul#m-tab-main-container-1-nav li a.unseen {
+  color: var(--dracula-purple) !important;
+}
+
+a,
+input[type=checkbox]:checked+label,
+input[type=checkbox]:checked+label a {
+  color: var(--dracula-accent) !important;
+}
+
+/* Primary buttons and elements */
+.button-avatar-pick,
+.button-change-avatar,
+.button-ignore,
+.button-logout,
+.button-more,
+.button-no,
+.button-redirect,
+.button-send,
+.button-settings,
+.button-success,
+.button-yes,
+.floatbox-box .enter,
+.m-avatar-prefix,
+.m-invitation-prefix,
+.m-msg-item.censored .m-msg-item-image-container::before,
+.m-popup-prefix,
+.m-reg-prefix,
+ul#m-tab-main-container-1-nav li a {
+  background: var(--dracula-button) !important;
+  border: none;
+  color: var(--dracula-fg) !important;
+}
+
+.active {
+  border-color: var(--dracula-purple);
+}
+
+/* Hover and active states for primary buttons */
+#tooltip,
+.giflandia-toolbar-box .giflandia-toolbar-item.active,
+.giflandia-toolbar-box .giflandia-toolbar-item:hover,
+.m-game__button:hover,
+#accessibilityButtonContrast:hover,
+#accessibilityButtonLg:hover,
+#accessibilityButtonXs:hover,
+#accessibilityButtonMd:hover,
+.m-game__button:hover .button-avatar-pick:hover,
+.button-avatar-pick:active,
+.button-change-avatar:hover,
+.button-change-avatar:active,
+.button-ignore:hover,
+.button-ignore:active,
+.button-logout:hover,
+.button-logout:active,
+.button-no:hover,
+.button-no:active,
+.button-redirect:hover,
+.button-redirect:active,
+.button-send:hover,
+.button-send:active,
+.button-settings:hover,
+.button-settings:active,
+.button-success:hover,
+.button-success:active,
+.button-yes:hover,
+.button-yes:active,
+.floatbox-box .enter:hover tooltip-with-close:after {
+  background: var(--dracula-purple) !important;
+  border: none;
+}
+
+#m-sendMessage .m-button-option--upload input, .m-button-option--upload input{
+background: url(/i/chat/other/camera_icon.png) 4px 6px no-repeat var(--dracula-button) !important;}
+
+/* Form controls and selects */
+.button-more,
+.m-button-option--upload,
+.m-button-option--report input,
+tooltip-with-close,
+.giflandia-toolbar-box .giflandia-toolbar-item,
+.m-game__button,
+#accessibilityButtonContrast,
+#accessibilityButtonLg,
+#accessibilityButtonXs,
+#accessibilityButtonMd,
+.rodo-popup-settings,
+.rodo-popup-buttons button.rodo-popup-agree:hover,
+.newsfeed__player__desc,
+.newsfeed__weather__check__45-day::before,
+.newsfeed__carousel .carousel .control-dots,
+.newsfeed,
+.box-info-content.visible,
+.floatbox-box input[type=password],
+.floatbox-box input[type=text],
+#user-settings-nick-color-select,
+input[type=button],
+.bad-behavior-reason-select,
+.button-edit,
+.m-button-option,
+.m-tab-container-ul li a,
+.user-report-reason-select,
+select[id^=m-s_] {
+  background: var(--dracula-button) !important;
+  color: var(--dracula-fg) !important;
+}
+
+#tooltip:before {
+  border-top: 12px solid var(--dracula-purple)
+}
+
+#user-settings-nick-color-select:hover,
+.bad-behavior-reason-select:hover,
+.button-edit:hover,
+.button-edit:active,
+.m-button-option:hover,
+.m-button-option:active,
+.m-tab-container-ul li a:hover,
+.user-report-reason-select:hover,
+select[id^=m-s_]:hover {
+  background: var(--dracula-purple) !important;
+}
+
+.simple-news {
+  background-color: #e2e2e2;
+  border: 1px solid #44475a;
+  box-shadow: inset 0 3px 10px #44475a;
+}
+
+.simple-news__header {
+  font-weight: bold;
+}
